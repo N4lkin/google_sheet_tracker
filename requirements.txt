@@ -1,0 +1,11 @@
+google-api-python-client==2.55.0
+google-auth-httplib2==0.1.0
+google-auth-oauthlib==0.5.2
+sqlalchemy==1.4.39
+alembic==1.8.1
+psycopg2==2.9.3
+aiohttp==3.8.1
+redis==4.3.4
+hiredis==2.0.0
+aiogram==2.21
+python-decouple==3.6
