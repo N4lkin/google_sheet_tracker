@@ -35,3 +35,5 @@
 ### 2) Запомните полученный ID
 ### 3) Запустите файл services/create_notification_recipient.py и следуйте инструкциям
 ### 4) Отправьте любое сообщение https://t.me/canalservice_test_bot
+
+[Google Sheets](https://docs.google.com/spreadsheets/d/1t8NjnDmAAVTqDGaNWxI8V5FNy8ecryFZ73un1nEfhmc/edit#gid=0)
