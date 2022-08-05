@@ -7,12 +7,6 @@
 
     git@github.com:N4lkin/google_sheet_tracker.git
 
-## Настройте переменные окружения
-### Вы можете сделать это любым удобным для вас способом. Например:
-##### Из корня проекта введите
-    ln -s .env venv/.env
-##### добавьте в конец файлы venv/bin/activate
-    export `grep -Ev '^#|^$|=$' .env`
 ## Установите все зависимости
     pip3 install -r base_requirements.txt
 
@@ -24,6 +18,14 @@
     cp .env.example .env
 
     docker-compose -f dev-compose up -d 
+###### в .env будет необходимо вручную ввести одну из переменных GOOGLE_APPLICATION_CREDENTIALS
+
+## Настройте переменные окружения
+### Вы можете сделать это любым удобным для вас способом. Например:
+##### Из корня проекта введите
+    ln -s .env venv/.env
+##### добавьте в конец файлы venv/bin/activate
+    export `grep -Ev '^#|^$|=$' .env`
 
 ## Примите имеющиеся миграции
     alembic upgrade head
