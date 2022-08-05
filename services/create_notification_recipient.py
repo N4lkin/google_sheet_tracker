@@ -13,6 +13,14 @@ def create_notification_recipient():
         print("ожидается численное значение")
 
     session = SessionLocal()
+    if (
+        session.query(TelegramNotificationModel)
+        .filter(TelegramNotificationModel.chat_id == id)
+        .first()
+        is not None
+    ):
+        print("Этот пользователь уже есть в базе")
+        exit()
     uid = uuid.uuid4()
     chat_db = TelegramNotificationModel(uuid=str(uid), chat_id=id)
     session.add(chat_db)
