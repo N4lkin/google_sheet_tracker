@@ -12,3 +12,5 @@ class Settings:
     GOOGLE_APPLICATION_CREDENTIALS = decouple.config("GOOGLE_APPLICATION_CREDENTIALS")
     CBRF_DAILY = decouple.config("CBRF_DAILY")
     TG_BOT_KEY = decouple.config("TG_BOT_KEY")
+    REDIS_PORT = decouple.config("REDIS_PORT")
+    REDIS_HOST = decouple.config("REDIS_HOST")
