@@ -21,6 +21,8 @@
 
 ## Поднимите Docker-Compose
 ##### из корня проекта введите (флаг -d нужен для скрытия логирования)
+    cp .env.example .env
+
     docker-compose -f dev-compose up -d 
 
 ## Примите имеющиеся миграции
