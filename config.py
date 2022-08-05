@@ -14,3 +14,6 @@ class Settings:
     TG_BOT_KEY = decouple.config("TG_BOT_KEY")
     REDIS_PORT = decouple.config("REDIS_PORT")
     REDIS_HOST = decouple.config("REDIS_HOST")
+    SQLALCHEMY_DATABASE_URL = decouple.config("SQLALCHEMY_DATABASE_URL")
+    DB_AUTOCOMMIT = False
+    DB_AUTOFLUSH = False
