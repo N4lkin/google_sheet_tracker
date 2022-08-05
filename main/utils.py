@@ -8,7 +8,7 @@ from config import Settings
 from main.constants import BASE_DIR
 
 
-redis_connection = redis.Redis(host="0.0.0.0", port=6379, db=0)
+redis_connection = redis.Redis(host=Settings.REDIS_HOST, port=Settings.REDIS_PORT, db=0)
 
 
 def path_to_file(file_path):
