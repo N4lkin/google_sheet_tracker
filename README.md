@@ -21,9 +21,7 @@
 ##### из корня проекта введите (флаг -d нужен для скрытия логирования)
     cp .env.example .env
 
-    docker-compose -f dev-compose up -d 
-###### в .env будет необходимо вручную ввести одну из переменных GOOGLE_APPLICATION_CREDENTIALS
-
+    docker-compose -f dev-compose up -d
 
 ## Настройте переменные окружения
 
