@@ -11,6 +11,7 @@ def create_notification_recipient():
 
     except ValueError:
         print("ожидается численное значение")
+        exit()
 
     session = SessionLocal()
     if (

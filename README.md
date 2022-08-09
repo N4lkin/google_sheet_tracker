@@ -5,17 +5,14 @@
 # Как запустить проект:
 ## Скопировать репозиторий
 
-	https://github.com/N4lkin/google_sheet_tracker.git
+	git clone https://github.com/N4lkin/google_sheet_tracker.git
 
 или
 
-    git@github.com:N4lkin/google_sheet_tracker.git
+	git clone git@github.com:N4lkin/google_sheet_tracker.git
 
 ## Установите все зависимости
-    pip3 install -r base_requirements.txt
-
-    pip3 install -r tests_requirements.txt
-
+    pip3 install -r requirements.txt
 
 ## Поднимите Docker-Compose
 ##### из корня проекта введите (флаг -d нужен для скрытия логирования)
