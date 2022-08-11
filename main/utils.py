@@ -5,14 +5,13 @@ import aiohttp
 import redis
 
 from config import Settings
-from main.constants import BASE_DIR
 
 
 redis_connection = redis.Redis(host=Settings.REDIS_HOST, port=Settings.REDIS_PORT, db=0)
 
 
 def path_to_file(file_path):
-    return "%s/%s" % (BASE_DIR, file_path)
+    return "%s/%s" % (Settings.ROOT_DIR, file_path)
 
 
 async def parse_usd():
