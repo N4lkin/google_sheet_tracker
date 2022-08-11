@@ -18,7 +18,7 @@
 ##### из корня проекта введите (флаг -d нужен для скрытия логирования)
     cp .env.example .env
 
-    docker-compose -f dev-compose up -d
+    docker-compose up -d
 
 ## Настройте переменные окружения
 
