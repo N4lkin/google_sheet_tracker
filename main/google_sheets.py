@@ -8,7 +8,7 @@ from services.google_service_connection import service
 from telegram_notofication.notification import notification_sheet_problem
 
 
-async def get_sheet_data(first: str, second: str, major_dimension: str = None):
+async def get_sheet_data(first: str, second: str, major_dimension: str = None) -> str:
     """
     :param first: Ожидает строковое значение ОТ которого будут получены значение в Google Sheets
     :param second: Ожидает строковое значение ДО которого будут получены значение в Google Sheets
@@ -35,7 +35,10 @@ async def get_sheet_data(first: str, second: str, major_dimension: str = None):
     raise ValueError("excepted ROWS or COLUMNS but got %s" % major_dimension)
 
 
-async def update_info_about_orders():
+async def update_info_about_orders() -> None:
+    """
+    Проверяет состояние аргументов гугл таблицы и меняет их в БД в соответствии с полученными данными
+    """
     data = await get_sheet_data("a1", "z1000", "rows")
     session = SessionLocal()
     for value in data[1::]:
@@ -72,7 +75,7 @@ async def update_info_about_orders():
         session.close()
 
 
-async def validate_data(data):
+async def validate_data(data: dict) -> list | None:
     id = data[0]
     order_number = data[1]
     price = data[2]

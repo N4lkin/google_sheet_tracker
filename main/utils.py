@@ -10,11 +10,17 @@ from config import Settings
 redis_connection = redis.Redis(host=Settings.REDIS_HOST, port=Settings.REDIS_PORT, db=0)
 
 
-def path_to_file(file_path):
+def path_to_file(file_path: str) -> str:
+    """
+    Утилса для получения относительного корня приложения путя к файлу
+    """
     return "%s/%s" % (Settings.ROOT_DIR, file_path)
 
 
 async def parse_usd():
+    """
+    Утисла для получения актуального курса доллара на ЦБ на сегодняшний день
+    """
     url = Settings.CBRF_DAILY
 
     async with aiohttp.ClientSession() as session:
@@ -27,7 +33,10 @@ async def parse_usd():
             return usd
 
 
-async def usd_in_rub(summ):
+async def usd_in_rub(summ: float) -> float:
+    """
+    Утилса для конвертации рублей в доллары
+    """
     usd = redis_connection.get("usd")
     if not usd:
         usd = await parse_usd()

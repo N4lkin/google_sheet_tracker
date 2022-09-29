@@ -5,6 +5,9 @@ from database.models import TelegramNotificationModel
 
 
 def create_notification_recipient():
+    """
+    Используйте для включения вашего id в базу администрации
+    """
     print("Введите полученный из бота ID")
     try:
         id: int = int(input())

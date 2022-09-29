@@ -17,7 +17,10 @@ dp = Dispatcher(bot)
 session = SessionLocal()
 
 
-async def notification_sheet_problem(description):
+async def notification_sheet_problem(description: str) -> None:
+    """
+    Инструмент для рассылки оповещений о событиях работы гугл таблицы
+    """
     recipients = session.query(TelegramNotificationModel).all()
     for recipient in recipients:
         recipient_id = recipient.chat_id
